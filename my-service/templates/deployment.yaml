@@ -1,3 +1,4 @@
+{{- range .Values.services }}
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -28,3 +29,4 @@ spec:
               value: "{{ .appId }}"
           resources: {{- toYaml $.Values.resources | nindent 12 }}
       restartPolicy: Always
+{{- end }}

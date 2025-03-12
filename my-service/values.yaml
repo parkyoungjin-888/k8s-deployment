@@ -7,7 +7,7 @@ services:
 
   - name: grpc-img-process-manager
     image: img234/grpc-collection-manager
-    tag: "0.1.2"
+    tag: "0.1.1"
     port: 21002
     appId: "grpc-img-process-manager-001"
 

@@ -9,5 +9,5 @@ spec:
   ports:
     - name: {{ .Release.Name }}
       protocol: TCP
-      port: {{ .port }}
-      targetPort: {{ .port }}
+      port: {{ $.Values.port }}
+      targetPort: {{ $.Values.port }}

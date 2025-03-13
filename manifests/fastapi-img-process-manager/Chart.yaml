@@ -1,0 +1,5 @@
+apiVersion: v2
+name: fastapi-img-process-manager
+description: fastapi-img-process-manager
+type: application
+version: 0.1.0

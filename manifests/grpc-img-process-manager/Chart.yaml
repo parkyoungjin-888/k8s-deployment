@@ -1,0 +1,5 @@
+apiVersion: v2
+name: grpc-img-process-manager
+description: grpc-img-process-manager
+type: application
+version: 0.1.0

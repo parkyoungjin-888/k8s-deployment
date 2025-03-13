@@ -4,6 +4,7 @@ metadata:
   name: {{ .Release.Name }}
   labels:
     app: {{ .Release.Name }}
+    namespace: {{ .Values.namespace }}
 spec:
   replicas: {{ $.Values.replicaCount }}
   selector:
@@ -14,6 +15,7 @@ spec:
     metadata:
       labels:
         app: {{ .Release.Name }}
+        namespace: {{ .Values.namespace }}
     spec:
       containers:
         - name: {{ .Release.Name }}

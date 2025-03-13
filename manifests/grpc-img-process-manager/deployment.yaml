@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app: {{ .Release.Name }}
+spec:
+  replicas: {{ $.Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+      namespace: {{ .Values.namespace }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}
+          image: "{{ .Values.image.name }}:{{ .Values.image.tag }}"
+          ports:
+            - containerPort: {{ $.Values.port }}
+          env:
+            - name: CONFIG_HOST
+              value: "grpc-config-server"
+            - name: CONFIG_PORT
+              value: "21001"
+            - name: APP_ID
+              value: "{{ $.Values.appId }}"
+          resources:
+            requests:
+              cpu: { { .Values.resources.requests.cpu } }
+              memory: { { .Values.resources.requests.memory } }
+            limits:
+              cpu: { { .Values.resources.limits.cpu } }
+              memory: { { .Values.resources.limits.memory } }
+      restartPolicy: Always

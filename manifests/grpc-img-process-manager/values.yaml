@@ -1,0 +1,21 @@
+namespace: default
+
+image:
+  name: img234/grpc-img-process-manager
+  tag: "0.1.2"
+
+port: 21002
+
+appId: "grpc-img-process-manager-001"
+
+replicaCount: 1
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: LoadBalancer

@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/parkyoungjin-888/k8s-app.git
     targetRevision: main
     path: manifests/grpc-img-process-manager
+    helm:
+      valueFiles:
+        - values.yaml 
   destination:
     server: https://kubernetes.default.svc
     namespace: default

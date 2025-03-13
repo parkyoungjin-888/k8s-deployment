@@ -27,11 +27,5 @@ spec:
               value: "21001"
             - name: APP_ID
               value: "{{ $.Values.appId }}"
-          resources:
-            requests:
-              cpu: { { .Values.resources.requests.cpu } }
-              memory: { { .Values.resources.requests.memory } }
-            limits:
-              cpu: { { .Values.resources.limits.cpu } }
-              memory: { { .Values.resources.limits.memory } }
+          resources: {{- toYaml $.Values.resources | nindent 12 }}
       restartPolicy: Always

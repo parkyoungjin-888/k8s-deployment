@@ -1,7 +1,7 @@
 namespace: default
 
 image:
-  name: img234/fastapi-collection-manager
+  name: img234/fastapi-img-process-manager
   tag: 0.1.1-beta
 
 port: 21101

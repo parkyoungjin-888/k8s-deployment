@@ -2,7 +2,7 @@ namespace: default
 
 image:
   name: img234/grpc-collection-manager
-  tag: "0.1.0"
+  tag: "0.1.2"
 
 port: 21002
 

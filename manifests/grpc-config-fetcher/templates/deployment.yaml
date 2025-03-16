@@ -24,7 +24,7 @@ spec:
             - containerPort: {{ $.Values.port }}
           env:
             - name: SERVER_PORT
-              value: 21001
+              value: "21001"
             - name: CONFIG_URL
               valueFrom:
                   secretKeyRef:

@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: grpc-img-process-manager
+  name: grpc-config-fetcher
   namespace: argocd
 spec:
   project: default

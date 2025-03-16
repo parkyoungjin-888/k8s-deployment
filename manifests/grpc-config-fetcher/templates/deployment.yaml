@@ -30,8 +30,6 @@ spec:
                   secretKeyRef:
                     name: grpc-config-server
                     key: CONFIG_URL
-            - name: APP_ID
-              value: "{{ $.Values.appId }}"
             - name: TZ
               value: Asia/Seoul
           resources: {{- toYaml $.Values.resources | nindent 12 }}

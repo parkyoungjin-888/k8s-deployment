@@ -1,0 +1,21 @@
+namespace: default
+
+image:
+  name: img234/grpc-config-fetcher
+  tag: "0.1.3"
+
+port: 21001
+
+appId: "grpc-config-fetcher-001"
+
+replicaCount: 1
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: LoadBalancer

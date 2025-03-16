@@ -23,10 +23,11 @@ spec:
           ports:
             - containerPort: {{ $.Values.port }}
           env:
-            - name: CONFIG_HOST
-              value: "grpc-config-fetcher"
-            - name: CONFIG_PORT
-              value: "21001"
+            - name: CONFIG_URL
+              valueFrom:
+                  secretKeyRef:
+                    name: grpc-config-server
+                    key: CONFIG_URL
             - name: APP_ID
               value: "{{ $.Values.appId }}"
             - name: TZ

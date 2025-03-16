@@ -24,7 +24,7 @@ spec:
             - containerPort: {{ $.Values.port }}
           env:
             - name: CONFIG_HOST
-              value: "grpc-config-server"
+              value: "grpc-config-fetcher"
             - name: CONFIG_PORT
               value: "21001"
             - name: APP_ID

@@ -6,8 +6,6 @@ image:
 
 port: 21001
 
-appId: "grpc-config-fetcher-001"
-
 replicaCount: 1
 
 resources:

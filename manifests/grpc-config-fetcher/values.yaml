@@ -2,7 +2,7 @@ namespace: default
 
 image:
   name: img234/grpc-config-fetcher
-  tag: 0.1.3
+  tag: 0.1.3-beta
 
 port: 21001
 

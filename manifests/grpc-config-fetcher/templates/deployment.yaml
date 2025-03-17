@@ -28,7 +28,7 @@ spec:
             - name: CONFIG_URL
               valueFrom:
                 secretKeyRef:
-                  name: grpc-config-server
+                  name: grpc-config-fetcher
                   key: CONFIG_URL
             - name: TZ
               value: Asia/Seoul

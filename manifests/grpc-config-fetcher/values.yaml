@@ -4,7 +4,7 @@ image: img234/grpc-config-fetcher:0.1.4
 
 port: "21001"
 
-replicaCount: 1
+replicaCount: 2
 
 resources:
   limits:

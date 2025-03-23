@@ -1,18 +1,25 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Application
+kind: ApplicationSet
 metadata:
   name: root-app
   namespace: argocd
 spec:
-  project: default
-  source:
-    repoURL: https://github.com/parkyoungjin-888/k8s-deployment.git
-    targetRevision: main
-    path: applications
-  destination:
-    server: https://kubernetes.default.svc
-    namespace: argocd
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+  generators:
+    - directory:
+        path: applications
+  template:
+    metadata:
+      name: '{{path.basename}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/parkyoungjin-888/k8s-deployment.git
+        targetRevision: main
+        path: '{{path}}'
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: argocd
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true

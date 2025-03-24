@@ -33,6 +33,8 @@ spec:
               value: "{{ $.Values.appId }}"
             - name: TZ
               value: Asia/Seoul
+          securityContext:
+            privileged: true
           volumeMounts:
             - name: video-device
               mountPath: /dev/video0

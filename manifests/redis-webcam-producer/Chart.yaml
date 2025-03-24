@@ -1,0 +1,5 @@
+apiVersion: v2
+name: redis-webcam-producer
+description: redis-webcam-producer
+type: application
+version: 0.1.0

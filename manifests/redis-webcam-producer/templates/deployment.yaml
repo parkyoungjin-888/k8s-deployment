@@ -12,20 +12,20 @@ spec:
       app: {{ .Release.Name }}
       namespace: {{ .Values.namespace }}
   template:
-    affinity:
-      nodeAffinity:
-        requiredDuringSchedulingIgnoredDuringExecution:
-          nodeSelectorTerms:
-            - matchExpressions:
-                - key: kubernetes.io/hostname
-                  operator: In
-                  values:
-                    - yj-t8-plus
     metadata:
       labels:
         app: {{ .Release.Name }}
         namespace: {{ .Values.namespace }}
     spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: In
+                    values:
+                      - yj-t8-plus
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image }}"

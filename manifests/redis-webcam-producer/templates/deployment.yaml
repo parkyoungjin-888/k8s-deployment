@@ -10,11 +10,11 @@ spec:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
-        - matchExpressions:
-          - key: kubernetes.io/hostname
-            operator: In
-            values:
-            - yj-t8-plus
+          - matchExpressions:
+              - key: kubernetes.io/hostname
+                operator: In
+                values:
+                  - yj-t8-plus
   replicas: {{ $.Values.replicaCount }}
   selector:
     matchLabels:

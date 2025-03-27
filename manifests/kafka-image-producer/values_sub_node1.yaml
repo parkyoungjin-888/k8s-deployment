@@ -1,0 +1,19 @@
+namespace: default
+
+image: img234/kafka-image-producer:0.1.0
+
+port: 8000
+
+appId: "kafka-image-producer-001"
+
+replicaCount: 1
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: ClusterIP

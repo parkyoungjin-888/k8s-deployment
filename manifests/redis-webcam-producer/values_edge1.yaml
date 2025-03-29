@@ -8,6 +8,10 @@ appId: "redis-webcam-producer-001"
 
 replicaCount: 1
 
+nodeName: "edge1"
+
+mountPath: "/dev/video0"
+
 resources:
   limits:
     cpu: "500m"

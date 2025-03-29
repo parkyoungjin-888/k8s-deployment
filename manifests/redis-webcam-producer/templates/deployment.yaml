@@ -17,15 +17,8 @@ spec:
         app: {{ .Release.Name }}
         namespace: {{ .Values.namespace }}
     spec:
-      affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: kubernetes.io/hostname
-                    operator: In
-                    values:
-                      - yj-t8-plus
+      nodeSelector:
+        node-name: "{{ .Values.nodeName }}"
       containers:
         - name: {{ .Release.Name }}
           image: "{{ .Values.image }}"
@@ -44,11 +37,11 @@ spec:
             privileged: true
           volumeMounts:
             - name: video-device
-              mountPath: /dev/video0
+              mountPath: "{{ $.Values.mountPath }}"
           resources: {{- toYaml $.Values.resources | nindent 12 }}
       restartPolicy: Always
       volumes:
         - name: video-device
           hostPath:
-            path: /dev/video0
+            path: "{{ $.Values.mountPath }}"
             type: CharDevice

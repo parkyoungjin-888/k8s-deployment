@@ -8,6 +8,8 @@ appId: "kafka-image-producer-001"
 
 replicaCount: 1
 
+nodeName: "server2"
+
 resources:
   limits:
     cpu: "500m"

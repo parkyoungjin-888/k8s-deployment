@@ -11,7 +11,7 @@ spec:
     path: manifests/kafka-image-producer
     helm:
       valueFiles:
-        - values_sub_node1.yaml
+        - values_edge1.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default

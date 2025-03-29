@@ -8,7 +8,7 @@ appId: "redis-webcam-producer-001"
 
 replicaCount: 1
 
-nodeName: "edge1"
+nodeName: "server2"
 
 mountPath: "/dev/video0"
 

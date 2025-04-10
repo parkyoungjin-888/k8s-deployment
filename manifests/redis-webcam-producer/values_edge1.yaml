@@ -6,9 +6,9 @@ port: 8000
 
 appId: "redis-webcam-producer-001"
 
-replicaCount: 0
+replicaCount: 1
 
-nodeName: "server2"
+nodeName: "edge1"
 
 mountPath: "/dev/video0"
 

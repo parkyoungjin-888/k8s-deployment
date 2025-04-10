@@ -6,7 +6,7 @@ port: 21101
 
 appId: "fastapi-img-process-manager-001"
 
-replicaCount: 0
+replicaCount: 1
 
 resources:
   limits:

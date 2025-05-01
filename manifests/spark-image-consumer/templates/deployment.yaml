@@ -1,0 +1,47 @@
+apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
+metadata:
+  name: spark-image-consumer
+  namespace: default
+spec:
+  timeToLiveSeconds: 300
+  type: Python
+  mode: cluster
+  image: {{ .Values.image }}
+  imagePullPolicy: IfNotPresent
+  mainApplicationFile: local:///opt/bitnami/spark/submit/app.py
+  sparkVersion: "3.5.5"
+  restartPolicy:
+    type: Never
+  sparkConf:
+    spark.jars: |
+      local:///opt/bitnami/spark/add_jars/commons-pool2-2.12.1.jar,
+      local:///opt/bitnami/spark/add_jars/mongo-spark-connector_2.12-10.2.1.jar,
+      local:///opt/bitnami/spark/add_jars/spark-sql-kafka-0-10_2.12-3.5.5.jar,
+      local:///opt/bitnami/spark/add_jars/kafka-clients-3.5.1.jar,
+      local:///opt/bitnami/spark/add_jars/spark-token-provider-kafka-0-10_2.12-3.5.5.jar
+  driver:
+    cores: {{ $.Values.driverReplicaCount }}
+    coreLimit: "1200m"
+    memory: "1g"
+    serviceAccount: spark
+    labels:
+      version: 3.5.5
+    envFrom:
+      - secretRef:
+          name: mongo-secret
+      - secretRef:
+          name: minio-secret
+      - name: APP_ID
+        value: {{ $.Values.appId }}
+      - name: TZ
+        value: Asia/Seoul
+  executor:
+    cores: {{ $.Values.executorReplicaCount }}
+    instances: 1
+    memory: "1g"
+    labels:
+      version: 3.5.5
+    envFrom:
+      - secretRef:
+          name: minio-secret

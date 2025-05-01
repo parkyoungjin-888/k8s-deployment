@@ -1,0 +1,12 @@
+namespace: default
+
+image: img234/spark-image-consumer:0.1.0
+
+port: 8000
+
+appId: "spark-image-consumer-001"
+
+driverReplicaCount: 1
+executorReplicaCount: 1
+
+nodeType: "server"

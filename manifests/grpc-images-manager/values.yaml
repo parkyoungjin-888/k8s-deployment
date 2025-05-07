@@ -1,0 +1,19 @@
+namespace: default
+
+image: img234/grpc-collection-manager:0.1.4
+
+port: 21002
+
+appId: "grpc-images-manager-001"
+
+replicaCount: 2
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: LoadBalancer

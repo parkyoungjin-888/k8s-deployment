@@ -1,0 +1,5 @@
+apiVersion: v2
+name: fastapi-images-manager
+description: fastapi-images-manager
+type: application
+version: 0.1.0

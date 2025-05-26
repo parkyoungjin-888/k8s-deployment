@@ -1,0 +1,19 @@
+namespace: default
+
+image: img234/fastapi-images-manager:0.1.0
+
+port: 21102
+
+appId: "fastapi-images-manager-001"
+
+replicaCount: 2
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: LoadBalancer

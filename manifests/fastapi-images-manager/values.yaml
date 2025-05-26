@@ -6,7 +6,7 @@ port: 21102
 
 appId: "fastapi-images-manager-001"
 
-replicaCount: 2
+replicaCount: 0
 
 resources:
   limits:

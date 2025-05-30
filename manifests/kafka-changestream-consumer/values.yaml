@@ -1,0 +1,21 @@
+namespace: default
+
+image: img234/kafka-changestream-consumer:0.1.0
+
+port: 8000
+
+appId: "kafka-changestream-consumer-001"
+
+replicaCount: 0
+
+nodeType: "server"
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: ClusterIP

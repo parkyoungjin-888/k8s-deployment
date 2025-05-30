@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kafka-changestream-consumer
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/parkyoungjin-888/k8s-deployment.git
+    targetRevision: main
+    path: manifests/kafka-changestream-consumer
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

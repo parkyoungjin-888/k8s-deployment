@@ -10,7 +10,7 @@ replicaCount: 1
 
 nodeName: "edge1"
 
-mountPath: "/dev/video1"
+mountPath: "/dev/video0"
 
 resources:
   limits:

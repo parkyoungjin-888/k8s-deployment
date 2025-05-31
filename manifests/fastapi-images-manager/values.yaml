@@ -1,6 +1,6 @@
 namespace: default
 
-image: img234/fastapi-images-manager:0.1.0
+image: img234/fastapi-images-manager:0.1.1
 
 port: 21102
 

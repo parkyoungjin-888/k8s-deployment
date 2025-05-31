@@ -11,7 +11,8 @@ spec:
     path: manifests/redis-webcam-producer
     helm:
       valueFiles:
-        - values_edge1.yaml
+        - values_edge1_cam1.yaml
+        - values_edge1_cam2.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default

@@ -1,0 +1,23 @@
+namespace: default
+
+image: img234/redis-webcam-producer:0.1.3
+
+port: 8000
+
+appId: "redis-webcam-producer-002"
+
+replicaCount: 1
+
+nodeName: "edge1"
+
+mountPath: "/dev/video1"
+
+resources:
+  limits:
+    cpu: "500m"
+    memory: "512Mi"
+  requests:
+    cpu: "250m"
+    memory: "256Mi"
+
+serviceType: ClusterIP

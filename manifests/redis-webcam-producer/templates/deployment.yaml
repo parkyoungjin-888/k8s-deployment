@@ -44,4 +44,4 @@ spec:
         - name: video-device
           hostPath:
             path: "{{ $.Values.mountPath }}"
-            type: CharDevice
+#            type: CharDevice

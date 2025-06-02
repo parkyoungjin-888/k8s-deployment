@@ -1,6 +1,6 @@
 namespace: default
 
-image: img234/spark-image-consumer:0.1.1
+image: img234/spark-image-consumer:0.1.2
 
 port: 8000
 

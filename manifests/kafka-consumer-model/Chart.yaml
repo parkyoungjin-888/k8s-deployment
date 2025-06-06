@@ -1,0 +1,5 @@
+apiVersion: v2
+name: kafka-consumer-model
+description: kafka-consumer-model
+type: application
+version: 0.1.0

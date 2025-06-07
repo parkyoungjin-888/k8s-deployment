@@ -14,6 +14,7 @@ resources:
   limits:
     cpu: "500m"
     memory: "512Mi"
+    nvidia.com/gpu: 2
   requests:
     cpu: "250m"
     memory: "256Mi"

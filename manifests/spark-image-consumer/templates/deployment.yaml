@@ -23,7 +23,7 @@ spec:
   driver:
     cores: {{ $.Values.driverReplicaCount }}
     coreLimit: "1200m"
-    memory: "1g"
+    memory: "2g"
     serviceAccount: spark
     labels:
       version: 3.5.5

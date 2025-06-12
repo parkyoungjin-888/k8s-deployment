@@ -1,6 +1,6 @@
 namespace: default
 
-image: img234/kafka-consumer-model:0.1.0
+image: img234/kafka-consumer-model:0.1.4
 
 port: 8000
 

@@ -6,7 +6,7 @@ port: 8000
 
 appId: "spark-image-consumer-001"
 
-driverReplicaCount: 0
-executorReplicaCount: 0
+driverReplicaCount: 1
+executorReplicaCount: 1
 
 nodeType: "server"

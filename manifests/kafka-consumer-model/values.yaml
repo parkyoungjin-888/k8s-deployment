@@ -13,11 +13,11 @@ nodeType: "server"
 resources:
   limits:
     cpu: "500m"
-    memory: "512Mi"
+    memory: "1024Mi"
     nvidia.com/gpu: 1
   requests:
     cpu: "250m"
-    memory: "256Mi"
+    memory: "512Mi"
     nvidia.com/gpu: 1
 
 serviceType: ClusterIP

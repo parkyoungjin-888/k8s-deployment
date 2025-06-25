@@ -13,7 +13,7 @@ nodeType: "server"
 resources:
   limits:
     cpu: "500m"
-    memory: "1024Mi"
+    memory: "1200Mi"
     nvidia.com/gpu: 1
   requests:
     cpu: "250m"

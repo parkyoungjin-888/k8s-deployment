@@ -1,0 +1,5 @@
+apiVersion: v2
+name: kafka-consumer-parquet
+description: kafka-consumer-parquet
+type: application
+version: 0.1.0

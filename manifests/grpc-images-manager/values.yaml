@@ -1,6 +1,6 @@
 namespace: default
 
-image: img234/grpc-collection-manager:0.1.7
+image: img234/grpc-collection-manager:0.1.8
 
 port: 21003
 

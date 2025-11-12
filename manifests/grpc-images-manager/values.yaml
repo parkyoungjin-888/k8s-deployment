@@ -6,7 +6,7 @@ port: 21003
 
 appId: "grpc-images-manager-001"
 
-replicaCount: 0
+replicaCount: 1
 
 resources:
   limits:

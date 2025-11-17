@@ -6,7 +6,7 @@ port: 8000
 
 appId: "kafka-changestream-producer-001"
 
-replicaCount: 0
+replicaCount: 1
 
 nodeType: "server"
 
